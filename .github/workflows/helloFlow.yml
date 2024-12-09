@@ -1,5 +1,19 @@
+#name: Hello Flow
+#on: workflow_dispatch
+#
+#jobs:
+#  first-job:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Diga oi
+#        run: echo "Hello World!"
+#      - name: Diga valeu
+#        run: echo "Valeu - bye!"
+
 name: Hello Flow
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   first-job:
@@ -9,3 +23,4 @@ jobs:
         run: echo "Hello World!"
       - name: Diga valeu
         run: echo "Valeu - bye!"
+
